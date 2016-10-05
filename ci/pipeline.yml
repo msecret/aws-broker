@@ -15,6 +15,7 @@ jobs:
     input_mapping:
       terraform-templates: aws-broker-app
     params:
+      TERRAFORM_ACTION: apply
       TEMPLATE_SUBDIR: ci/terraform
       STACK_NAME: {{staging-stack-name}}
       S3_TFSTATE_BUCKET: {{staging-s3-tfstate-bucket}}
@@ -161,6 +162,7 @@ jobs:
     input_mapping:
       terraform-templates: aws-broker-app
     params:
+      TERRAFORM_ACTION: apply
       TEMPLATE_SUBDIR: ci/terraform
       STACK_NAME: {{prod-stack-name}}
       S3_TFSTATE_BUCKET: {{prod-s3-tfstate-bucket}}
